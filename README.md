@@ -1,2 +1,3 @@
 # Curso_C
-Repositório para guardar os meus exercícios em python feitos no vscode
+Repositório para guardar os meus exercícios em C feitos no Dev C++
+
