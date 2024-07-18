@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void imprime(int m[0][4], int n){
+	int i,j;
+	for(i=0;i<n;i++){
+		for(j=0;j<4;j++){
+			printf("%d", m[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+int main(){
+	int mat[3][4] = {{1,2,3,4,}, {5,6,7,8,}, {21,22,33,45986}};
+	
+	imprime(mat, 3);
+}
