@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Desenvolva um programa que simule uma calculadora.
+1.Somar 2.Suntrair 3.Multiplicar 4.Dividir
+O usuario so conseguira processar dois números inteiros por vez */
+
+int main(int argc, char *argv[]) {
+	
+	int num,n1,n2,a,b,c,d;
+	
+	printf("Digite o primeiro num: \n ");
+	scanf("%d", &n1);
+	printf("Digite o segundo num: \n ");
+	scanf("%d", &n2);
+	
+	printf("Insira um valor de 1 a 4: \n");
+	scanf("%d", &num);
+	
+	switch(num){
+		case 1:
+			printf("SOMAR: \n");
+			a = n1 + n2;
+			printf("%d", a);
+			break;
+		case 2:
+			printf("SUBTRAIR: \n");
+			b = n1 - n2;
+			printf("%d", b);
+			break;
+		case 3:
+			printf("MULTIPLICAR: \n");
+			c = n1 * n2;
+			printf("%d", c);
+			break;
+		case 4:
+			printf("DIVIDIR: \n");
+			d = n1 / n2;
+			printf("%d", d);
+			break;
+		default:
+			printf("Valor invalido\n");
+			break;
+	}
+}
