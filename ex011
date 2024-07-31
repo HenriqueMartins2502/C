@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Faça um programa que receba o número de
+horas trabalhadas por um gestor e o valor do salário mínimo vigente. Crie uma função
+que calcule o salário a receber do gestor, seguindo as regras abaixo:
+I - a hora trabalhada vale a metade do salário mínimo;
+II - o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da
+hora trabalhada;
+III - o imposto equivale a 3% do salário bruto;
+IV - o salário a receber equivale ao salário bruto menos o imposto.
+Crie um algoritmo que invoque a respectiva função e mostre o salário a receber. */
+
+float CalcSalRec(float n_hr, float sal_min){
+	float hr_trab,sal_bruto,imp,sal_receber;
+	hr_trab = sal_min / 2.0;
+	sal_bruto = n_hr * hr_trab;
+	imp = sal_bruto * 0.03;
+	sal_receber = sal_bruto - imp;
+	return sal_receber;
+	
+}
+
+int main(int argc, char *argv[]) {
+	
+	float hr_trab,sal_min,sal_receber;
+	
+	printf("Digite o salario minimo : \n");
+	scanf("%f", &sal_min);
+	printf("Digite o numero de horas trabalhadas : \n");
+	scanf("%f", &hr_trab);
+	
+	sal_receber = CalcSalRec(hr_trab, sal_min);
+	printf("Salario a receber: %.2f", sal_receber);
+	
+}
