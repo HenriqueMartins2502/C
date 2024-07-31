@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Tabuada de 1 a 10 */
+
+int main(int argc, char *argv[]) {
+	
+	int num,i,soma;
+	printf("Digite o numero que deseja ver a tabuada de 1 a 10: ");
+	scanf("%d", &num);
+	
+	for(i=1;i<=10;i++){
+		soma = num * i;
+		printf("%d \n", soma);
+	}
+	
+}
