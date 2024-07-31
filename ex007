@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Desenvolva um algoritimo que some todos os numeros inteiros compreendidos entre 1 e 10 */
+
+int main(int argc, char *argv[]) {
+	int soma,i;
+	while(i <= 10){
+		soma += i;
+		i++;
+	}
+	printf("SOMA: %d", soma);
+}
