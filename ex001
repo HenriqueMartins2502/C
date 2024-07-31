@@ -1,0 +1,20 @@
+//Faça um programa que calcule a area e o perimetro de um retangulo
+
+#include <stdio.h>
+
+int main(){
+	
+	int area,peri,alt,lado;
+	
+	printf("Digite a altura do retangulo: \n");
+	scanf("%d", &alt);
+	printf("Digite o lado do retangulo: \n");
+	scanf("%d", &lado);
+	
+	area = lado * alt;
+	peri = 2 * (lado + alt);
+	
+	printf("A area do retangulo e %d cm2 \n", area);
+	printf("O perimetro do retangulo e %d cm2 \n", peri);
+	
+}
