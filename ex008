@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int i,ant1,ant2,atual;
+	
+	ant1 = 1;
+	ant2 = 0;
+	
+	printf("Fibonacci(8 primeiros termos)");
+	printf("%d \n", ant1),
+	printf("% \n", ant2);
+	
+	for(i=0;i<=8;i++){
+		atual = ant1 + ant2;
+		printf("%d \n", atual);
+		ant2 = ant1;
+		ant1 = atual;
+	}
+}
