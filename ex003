@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Faça um programa que receba o salario de um funcionario e o percentual de aumento,
+calcule e monstr o valor do aumento e o novo salario*/
+
+int main(int argc, char*argv[]){
+	
+	float salario,percentual,aumento,novo_salario;
+	
+	printf("Digite o salario do funcionario: \n");
+	scanf("%f", &salario);
+	printf("Digite o percentual de aumento do salario: \n");
+	scanf("%f", &percentual);
+	
+	aumento = salario * percentual / 100;
+	novo_salario = salario + aumento;	
+	
+	printf("O novo salario é: %.2f \n", novo_salario);
+	printf("O percentual de aumento e: %.2f \n", aumento);
+
+}
