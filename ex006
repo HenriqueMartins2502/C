@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Exercicio de media ponderada */
+
+int main(int argc, char *argv[]) {
+	float trab,ava,exame,med;
+	
+	printf("Insira a nota do trabalho: \n");
+	scanf("%f", &trab);
+	printf("Insira a nota da avaliacao: \n");
+	scanf("%f", &ava);
+	printf("Insira a nota do exame: \n");
+	scanf("%f", &exame);
+	
+	med = (trab*2 + ava*3 + exame*5) / 10;
+	
+	printf("A media do aluno e: %.2f \n", med);
+	
+	if (med >= 8 && med <= 10){
+		printf("Aluno nota A");
+	}
+	if (med >= 7 && med < 8 ){
+		printf("Aluno nota B");
+	}
+	if (med >= 6 && med < 7){
+		printf("Aluno nota C");
+	}
+	if (med >= 5 && med < 6){
+		printf("Aluno nota D");
+	}
+	if(med < 5){
+		printf("Aluno nota F");
+	}
+}
