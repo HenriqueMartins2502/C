@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Faça um programa que receba dois números e diga qual é o maior entre eles, se os números 
+forem iguais mostre que são iguais */
+
+int main(int argc, char *argv[]) {
+	
+	int n1,n2;
+	
+	printf("Digite o primeiro num: \n");
+	scanf("%d", &n1);
+	printf("Digite o segundo num: \n");
+	scanf("%d", &n2);
+	
+	if (n1 > n2){
+		printf("O %d e o maior numero", n1);
+	}
+	if (n2 > n1){
+		printf("O %d e o maior numero", n2);
+	}
+	if (n1 == n2){
+		printf("Os numeros ao iguais");
+	}
+}
