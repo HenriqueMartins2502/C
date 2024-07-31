@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* O custo de um carro novo ao consumidor
+final é o preço de fábrica somado ao percentual de lucro do distribuidor, acrescido dos
+impostos aplicados ao preço de fábrica. Faça um programa que receba o preço de
+fábrica de um veículo, o percentual de lucro do distribuidor e o percentual de impostos.
+Em cada item, crie uma função distinta para calcular e retornar:
+a) o valor correspondente ao lucro do distribuidor;
+b) o valor correspondente aos impostos;
+c) o preço final do veículo.
+Após criar cada uma das funções, desenvolva um algoritmo que declare e invoque cada
+uma das funções, mostrando o lucro do distribuidor, os impostos e o valor final do
+veículo */
+
+float CalcLucroDistribuidor(float p_fab, float per_dist){
+	return p_fab *  per_dist / 100;
+}
+
+float CalcImpostos(float p_fab, float per_imp){
+	return p_fab *  per_imp / 100;
+}
+
+float PrecoFinal(float p_fab, float valor_dist, float valor_imp){
+	return p_fab + valor_dist + valor_imp;
+}
+
+int main(int argc, char *argv[]) {
+	
+	float pf,pl,pi,lucro_dist,imp,valor_final;
+	
+	printf("Digite o preço de fabrica: \n");
+	scanf("%f", &pf);
+	printf("Digite o percentual de lucro: \n");
+	scanf("%f", &pl);
+	printf("Digite o percentaul de impostos: \n");
+	scanf("%f", &pi);
+	
+	lucro_dist = CalcLucroDistribuidor(pf,pl);
+	imp = CalcImpostos(pf,pi);
+	valor_final = PrecoFinal(pf,lucro_dist,imp);
+	
+	printf("O lucro do distribuidor: %f \n", lucro_dist);
+	printf("Impostos: %f \n", imp);
+	printf("O valor final do veiculo: %f \n", valor_final);
+}
