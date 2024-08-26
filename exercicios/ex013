@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Faça um programa que seja capaz de armazenar os dados de três pessoas: nome, idade,
+peso e altura. Ao final, o algoritmo deve mostrar, na tela, o nome e a idade da primeira
+pessoa e o peso e altura da última pessoa. */
+
+struct tipo_pessoa{
+	char nome[200];
+	int idade;
+	float peso;
+	float altura;
+};
+
+int main(int argc, char *argv[]) {
+	
+	struct tipo_pessoa lista[3];
+	int i;
+	
+	for(i=0;i<3;i++){
+		printf("Insira o nome da pessoa da posicao %d: \n", i+1);
+		scanf("%199[^\n]s", &lista[i].nome);
+		fflush(stdin);
+		printf("Insira a idade da pessoa da posicao %d \n", i+1);
+		scanf("%d", &lista[i].idade);
+		fflush(stdin);
+		printf("Insira o peso da pessoa da posicao %d \n", i+1);
+		scanf("%f", &lista[i].peso);
+		fflush(stdin);
+		printf("Insira a altura da pessoa da posicao %d \n", i+1);
+		scanf("%f", &lista[i].altura);
+		fflush(stdin);
+	}
+	
+	printf("Nome da primeira pessoa: %s \n", lista[0].nome);
+	printf("Idade da primeira pessoa: %d \n", lista[0].idade);
+	printf("Peso da terceira pessoa: %f \n", lista[2].peso);
+	printf("Altura da terceira pessoa: %f \n", lista[2].altura);
+	
+}
