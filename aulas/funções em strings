@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+
+# define N 20
+
+int main(){
+	
+	char origem[N] = {"Hello, world!!"};
+	char destino[N];	
+	
+	printf("Antes do strcpy: \n");
+	puts(origem);
+	puts(destino);
+	
+	strcpy(destino,origem);
+	
+	printf("Depois do strcpy: \n");
+	puts(origem);
+	puts(destino);
+	
+	char s1[N] = {"Logica de"};
+	char s2[N] = {" Programacao!"};
+	
+	printf("Antes do strcat: \n");
+	printf("str1: %s\n", s1);
+	printf("str1: %s\n", s2);
+	
+	strcat(s1, s2);
+	
+	printf("Depois do strcat: \n");
+	puts(s1);
+	
+}
