@@ -1,0 +1,17 @@
+//Escreva um programa em C que pergunte ao usuário um inteiro positivo n e, em seguida,
+//imprima a soma dos primeiros n inteiros positivos
+
+#include <stdio.h>
+
+int main(){
+	
+	int n,soma,cont;
+	
+	printf("Digite um numero inteiro positivo: \n");
+	scanf("%d", &n);
+	
+	for(cont=0;cont<=n;cont++){
+		soma += cont;
+	}
+	printf("A soma dos numeros antes de %d e %d", n, soma);
+}
