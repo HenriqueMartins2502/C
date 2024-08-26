@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+	char a[10];
+
+	printf("Digite algo (scanf convencional): ");
+	scanf("%s", a);
+	fflush(stdin);
+	
+	printf("Resultado: %s\n\n", a);
+	
+	printf("Digite algo (scanf aprimorado): ");
+	scanf("%9[^\n]'s", a);
+	fflush(stdin);
+	
+	printf("Resultado: %s\n\n", a);
+}
